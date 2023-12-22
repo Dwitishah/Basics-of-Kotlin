@@ -1,0 +1,188 @@
+fun main(args: Array<String>) {
+    
+    // 1.Ascii value of a character
+        // val ch = 'a'
+        // val ascii = ch.toInt()
+        // println("Ascii value of $ch is: $ascii")
+        
+    //2. Swap
+    // var a=5
+    // var b=10
+    // var temp:Int
+    // temp = a
+    // a = b
+    // b = temp
+    // println("After swapping value of a and b is $a and $b" )
+    
+    //3
+    // val num = 5
+    // var factorial: Long = 1
+    // for (i in 1..num) {
+    //     // factorial = factorial * i;
+    //     factorial *= i.toLong()
+    // }
+    // println("Factorial of $num = $factorial")
+    
+    //4
+    // val num = 5
+    // for (i in 1..10) {
+    //     val product = num * i
+    //     println("$num * $i = $product")
+    // }
+        
+    //5
+    //  var r=1234
+    //  var rev=0
+    //      while (r!=0) {
+    //         var rem = r%10
+    //         rev = rev *10 +rem
+    //         r= r/10
+    //      }
+    //      println("Reverse is $rev")
+    
+    //6
+    
+    // var r:Int
+    // var sum=0
+    // var temp:Int   
+    // var n=454
+    // temp=n;    
+    // while(n>0){    
+    //      r=n%10
+    //      sum=(sum*10)+r    
+    //      n=n/10
+    // }    
+    // if(temp==sum)    
+    //     println("palindrome number ") 
+    // else    
+    //     println("not palindrome")
+    
+    //7
+    
+    // var number = 371
+    // var temp:Int 
+    // var rem:Int
+    // var result = 0
+    //      temp = number
+    //      while (temp != 0)
+    //      {
+    //         rem = temp % 10
+    //         result += rem * rem * rem
+    //         temp /= 10
+    //      }
+    //      if(result == number)
+    //          println("$number   is an Armstrong number.")
+    //      else
+    //          println("$number is not an Armstrong number.")
+    
+    //8
+    
+//     val num = 10
+//     for (i in 1..num) {
+//     if (num % i == 0) {
+//         println("$i ")
+//     }
+// }
+}
+
+//1
+fun power(b: Int, pow: Int): Int {
+    if (pow != 0)
+        return b * power(b, pow - 1)
+    else
+        return 1
+}
+fun main(args: Array<String>) {
+    var b = 5
+    var pow = 2
+    var result = power(b, pow)
+
+    println("$b^$pow = $result")
+}
+
+//2
+
+fun main(args: Array<String>) {
+   var arr = arrayOf(1,2,3,4,5)
+   var max = arr[0]
+        for(i in arr){
+            if(max<i){
+                max = i
+            }
+        }
+        println("Largest element is:$max");
+    
+}
+
+//3
+
+fun main(args: Array<String>) {
+
+    val num = intArrayOf(1, 2, 3, 4, 5)
+    val value = 3
+    var found = false
+
+    for (n in num) {
+        if (n == value) {
+            found = true
+            break
+        }
+    }
+    if (found)
+        println(" found.")
+    else
+        println("not found")
+}
+
+
+//4
+
+class Hello{
+    
+}
+fun main(){
+    val obj = Hello()
+    if(obj is Hello){
+        println("Yes")
+    }
+    else{
+        println("No")
+    }
+}
+
+//5
+
+fun main(args: Array<String>) {
+    val str = "Hello World"
+    val ch = 'e'
+    var freq = 0
+
+    for (i in 0..str.length - 1) {
+        if (ch == str[i]) {
+            ++freq
+        }
+    }
+    println("Frequency of $ch = $freq")
+}
+
+//6
+
+fun main(){
+    val s ="Hello World    jjuu"
+    val ns = s.replace(" ","")
+    println("$ns")
+}
+
+//7
+
+fun main(){
+    var s = "12345"
+    var n = true
+    var num = s.toInt()
+    if(n){
+        println("$s is number");
+        }
+        else{
+            System.out.println("$s not a number");
+        }
+}
